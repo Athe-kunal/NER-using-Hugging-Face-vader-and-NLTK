@@ -27,7 +27,7 @@ def scrolling_func(wait,driver):
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         # Scroll down to bottom
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        ActionChains(driver).key_down(Keys.CONTROL).send_keys('END').key_up(Keys.CONTROL).perform()
 
         # Wait to load page
         time.sleep(SCROLL_PAUSE_TIME)
@@ -40,7 +40,8 @@ def scrolling_func(wait,driver):
         if new_height == last_height:
             break
         last_height = new_height
-
+    ActionChains(driver).key_down(Keys.CONTROL).send_keys('HOME').key_up(Keys.CONTROL).perform()
+    
 def parse_dates(years,months):
     base_url = "https://www.theverge.com/archives" 
     urls = []
