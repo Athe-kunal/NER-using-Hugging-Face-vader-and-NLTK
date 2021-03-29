@@ -14,13 +14,13 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import logging
 import nltk
-# nltk.download('punkt')
-# nltk.download('averaged_perceptron_tagger')
-# nltk.download('maxent_ne_chunker')
-# nltk.download('words')
-# nltk.download('stopwords')
-# nltk.download('punkt')
-# nltk.download("wordnet")
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download("wordnet")
 from nltk.tokenize import PunktSentenceTokenizer
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
